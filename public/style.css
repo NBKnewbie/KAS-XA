@@ -1,0 +1,181 @@
+:root {
+  --bg: #f1f7f3;
+  --card: #fff;
+  --text: #062016;
+  --muted: #556b64;
+  --accent: #16a34a;
+  --danger: #ef4444;
+  --success: #0ea74a;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, Segoe UI, Roboto, Arial;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #e8f6ee, #e6f7ee);
+  color: var(--text);
+  min-height: 100vh;
+  padding: 18px;
+}
+
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+p.lead {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 6px 18px rgba(6, 20, 16, 0.06);
+}
+
+button,
+.btn {
+  background: var(--accent);
+  color: white;
+  border: 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(6, 32, 22, 0.06);
+  color: var(--muted);
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: white;
+}
+
+/* Tombol "Muat Bulan" dengan warna dan efek */
+.btn-load {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 3px 6px rgba(22, 163, 74, 0.25);
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+.btn-load:hover {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(22, 163, 74, 0.35);
+}
+
+.btn-load:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 5px rgba(22, 163, 74, 0.3);
+}
+
+input,
+select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(6, 32, 22, 0.06);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+th,
+td {
+  padding: 8px;
+  border-bottom: 1px solid rgba(6, 32, 22, 0.03);
+  text-align: left;
+}
+
+tbody tr:hover {
+  background: rgba(22, 163, 74, 0.05);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.saldo-box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.saldo-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: rgba(6, 32, 22, 0.02);
+}
+
+.saldo-item strong {
+  color: var(--success);
+}
+
+.saldo-item.negative strong {
+  color: var(--danger);
+}
+
+.filter-box {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.exp-form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+@media (max-width: 980px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Kas Kelas — 3 Minggu</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <div>
+          <h1>Uang Kas Kelas X1A — Angkatan 2025</h1>
+          <p class="lead">Dosen Pembimbing Akademik Bu Iis Dwi Lestari</p>
+        </div>
+      </header>
+
+      <!-- Pilih tahun & bulan -->
+      <div class="filter-box">
+        <label>Tahun</label>
+        <select id="yearSelect"></select>
+        <label>Bulan</label>
+        <select id="monthSelect"></select>
+        <button id="btnLoad" class="btn-load">Muat Bulan</button>
+      </div>
+
+      <div class="grid">
+        <!-- Bagian utama: daftar siswa & pengeluaran -->
+        <section>
+          <div class="card">
+            <div class="header-row">
+              <div><strong id="totalStudents">0 siswa</strong></div>
+              <button id="btnAdd" class="btn">Tambah Siswa</button>
+            </div>
+
+            <table id="tableMain">
+              <thead>
+                <tr>
+                  <th>Nama</th>
+                  <th>K1</th>
+                  <th>K2</th>
+                  <th>K3</th>
+                  <th>Total</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="tbodyMain"></tbody>
+            </table>
+
+            <!-- Ringkasan per bulan -->
+            <div class="saldo-box">
+              <div class="saldo-item">
+                Total Pemasukan Bulan ini <strong id="totalIncome">Rp 0</strong>
+              </div>
+              <div class="saldo-item">
+                Total Pengeluaran Bulan ini <strong id="totalExpense">Rp 0</strong>
+              </div>
+              <div class="saldo-item">
+                Saldo Bulan Ini <strong id="saldoMonth">Rp 0</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form pengeluaran -->
+          <div class="card" style="margin-top: 14px">
+            <h3>Form Pengeluaran</h3>
+            <div class="exp-form">
+              <input id="expDesc" type="text" placeholder="Tujuan" />
+              <input id="expNote" type="text" placeholder="Catatan" />
+              <input id="expAmount" type="number" placeholder="Nominal (Rp)" />
+              <input id="expDate" type="date" />
+              <button id="btnAddExp" class="btn">Tambah</button>
+            </div>
+
+            <table id="tblExpenses">
+              <thead>
+                <tr>
+                  <th>Tanggal</th>
+                  <th>Tujuan</th>
+                  <th>Catatan</th>
+                  <th>Nominal</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="tbodyExpenses"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Ringkasan saldo total -->
+        <aside>
+          <div class="card">
+            <h3>Ringkasan</h3>
+            <div class="saldo-item" style="font-weight: 700">
+              Saldo Total (Keseluruhan) <strong id="saldoAll">Rp 0</strong>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
